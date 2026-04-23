@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafalan Cepat dalam 5 Menit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hafalan Cepat dalam 5 Menit</h1>
+        
+        <!-- Mode Input -->
+        <div id="inputMode" class="mode-section">
+            <p>Tulis atau tempel teks yang ingin dihafal:</p>
+            <textarea id="inputText" placeholder="Masukkan kalimat di sini..."></textarea>
+            <button id="startBtn" class="btn-primary">Mulai Sesi Hafalan</button>
+        </div>
+        
+        <!-- Mode Hafalan -->
+        <div id="halamanMode" class="mode-section hidden">
+            <div class="timer-box">
+                <p id="timer">5:00</p>
+            </div>
+            <div id="textDisplay" class="text-display"></div>
+            <div id="instructions" class="instructions"></div>
+            <button id="nextBtn" class="btn-secondary hidden">Lanjut ke Siklus Berikutnya</button>
+        </div>
+        
+        <!-- Mode Recording -->
+        <div id="recordingMode" class="mode-section hidden">
+            <h2>Latihan Mengingat</h2>
+            <p class="instruction-text">Tekan tombol di bawah dan ucapkan kalimat yang telah Anda pelajari:</p>
+            <button id="recordBtn" class="btn-record">Mulai Bicara</button>
+            <button id="stopBtn" class="btn-stop hidden">Selesai Bicara</button>
+            <div id="recordingIndicator" class="recording-indicator hidden">Mendengarkan...</div>
+            <div id="transcriptBox" class="transcript-box hidden">
+                <p><strong>Hasil Jawaban Anda:</strong></p>
+                <p id="transcript"></p>
+            </div>
+            <div id="resultBox" class="result-box hidden">
+                <p id="resultText"></p>
+                <p id="accuracyScore"></p>
+            </div>
+            <button id="retryBtn" class="btn-secondary hidden">Coba Lagi</button>
+            <button id="finishBtn" class="btn-primary hidden">Selesai & Lihat Hasil</button>
+        </div>
+        
+        <!-- Hasil Akhir -->
+        <div id="resultMode" class="mode-section hidden">
+            <h2>Hasil Latihan</h2>
+            <p id="finalResult"></p>
+            <button id="restartBtn" class="btn-primary">Mulai Baru</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
